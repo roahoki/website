@@ -10,8 +10,8 @@ export default function Home() {
   ]
 
   return (
-    <div className="bg-primary min-h-screen p-8 lg:p-24">
-      <div className="flex flex-col items-center gap-12">
+    <div className="bg-primary min-h-screen w-full p-8 lg:p-24">
+      <div className="flex flex-col items-center gap-12 min-h-screen">
         {/* Header */}
         <div className="text-center space-y-2">
           <h1 className="font-clash text-tertiary text-4xl lg:text-6xl font-bold">ROAHOKI</h1>
@@ -20,9 +20,10 @@ export default function Home() {
 
         {/* Video Carousel */}
         <VideoCarousel videoIds={videoIds} />
+        
+        {/* Espaciador para asegurar que el fondo negro se extienda */}
+        <div className="flex-grow w-full bg-primary"></div>
       </div>
     </div>
-
-    
   );
 }
