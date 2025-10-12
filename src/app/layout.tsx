@@ -1,4 +1,12 @@
 import type { Metadata } from "next";
+import "./globals.css";
+import localFont from "next/font/local";
+
+const clashDisplay = localFont({
+  src: '../../public/ClashDisplay-Variable.woff2',
+  variable: '--font-clash-display',
+  display: 'swap',
+}) 
 
 export const metadata: Metadata = {
   title: "roahoki.dev",
@@ -21,7 +29,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html suppressHydrationWarning lang="en">
+    <html suppressHydrationWarning lang="en" className={`${clashDisplay.variable}`}>
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" href="/favicon.png" type="image/png" />

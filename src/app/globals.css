@@ -1,1 +1,10 @@
 @import "tailwindcss";
+
+@theme {
+  --font-family-clash: var(--font-clash-display), ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Clase utilitaria para usar la fuente directamente */
+.font-clash {
+  font-family: var(--font-clash-display), ui-sans-serif, system-ui, sans-serif;
+}
