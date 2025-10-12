@@ -1,0 +1,38 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "roahoki.dev",
+  description: "personal website of roahoki",
+  icons: {
+    icon: [
+      { url: "/favicon.ico", type: "image/x-icon" },
+      { url: "/favicon.png", type: "image/png", sizes: "1024x1024" },
+      { url: "/favicon.png", type: "image/png", sizes: "32x32" },
+      { url: "/favicon.png", type: "image/png", sizes: "16x16" }
+    ],
+    shortcut: ["/favicon.ico"],
+    apple: [{ url: "/favicon.png", type: "image/png", sizes: "1024x1024" }],
+  },
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html suppressHydrationWarning lang="en">
+      <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/favicon.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/favicon.png" />
+      </head>
+      <body
+        suppressHydrationWarning
+        className={`antialiased`}
+      >
+        {children}
+      </body>
+    </html>
+  );
+}

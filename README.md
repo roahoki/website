@@ -1,2 +1,5 @@
-# website
-Todo sobre mí como desarrollador
+# roahoki website 🐈‍⬛
+
+```bash
+npm run dev
+```
