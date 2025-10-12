@@ -29,7 +29,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html suppressHydrationWarning lang="en" className={`${clashDisplay.variable}`}>
+    <html suppressHydrationWarning lang="en" className={`${clashDisplay.variable} bg-primary min-h-screen`}>
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" href="/favicon.png" type="image/png" />
@@ -37,9 +37,11 @@ export default function RootLayout({
       </head>
       <body
         suppressHydrationWarning
-        className={`antialiased`}
+        className={`antialiased bg-primary min-h-screen`}
       >
-        {children}
+        <div className="bg-primary min-h-screen">
+          {children}
+        </div>
       </body>
     </html>
   );

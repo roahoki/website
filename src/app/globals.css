@@ -10,6 +10,47 @@
   
 }
 
+/* Asegurar que html y body siempre tengan fondo negro */
+html {
+  background-color: #010101 !important;
+  min-height: 100vh;
+  height: 100%;
+}
+
+body {
+  background-color: #010101 !important;
+  min-height: 100vh;
+  height: 100%;
+}
+
+/* Prevenir flash de contenido blanco al cargar */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #010101;
+  z-index: -1;
+}
+
+/* Asegurar que el contenido principal ocupe toda la altura */
+#__next {
+  min-height: 100vh;
+  background-color: #010101;
+}
+
+/* Prevenir flash en el root */
+:root {
+  background-color: #010101;
+}
+
+/* Aplicar fondo negro a todos los elementos por defecto */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 /* Clase utilitaria para usar la fuente directamente */
 .font-clash {
   font-family: var(--font-clash-display), ui-sans-serif, system-ui, sans-serif;
