@@ -1,48 +1,32 @@
-import type { Metadata } from "next";
-import "./globals.css";
-import localFont from "next/font/local";
+import React from "react"
+import type { Metadata } from 'next'
+import { Geist, Geist_Mono } from 'next/font/google'
+import { Analytics } from '@vercel/analytics/next'
+import './globals.css'
 
-const clashDisplay = localFont({
-  src: '../../public/ClashDisplay-Variable.woff2',
-  variable: '--font-clash-display',
-  display: 'swap',
-}) 
+const _geist = Geist({ subsets: ["latin"] });
+const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "roahoki.dev",
-  description: "personal website of roahoki",
+  title: 'Joaquín',
+  description: 'Software Engineer, Developer, and Designer.',
+  generator: 'v0.app',
   icons: {
-    icon: [
-      { url: "/favicon.ico", type: "image/x-icon" },
-      { url: "/favicon.png", type: "image/png", sizes: "1024x1024" },
-      { url: "/favicon.png", type: "image/png", sizes: "32x32" },
-      { url: "/favicon.png", type: "image/png", sizes: "16x16" }
-    ],
-    shortcut: ["/favicon.ico"],
-    apple: [{ url: "/favicon.png", type: "image/png", sizes: "1024x1024" }],
+    icon: '/favicon.ico',
   },
-};
+}
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
-    <html suppressHydrationWarning lang="en" className={`${clashDisplay.variable} bg-primary min-h-screen`}>
-      <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" href="/favicon.png" type="image/png" />
-        <link rel="apple-touch-icon" href="/favicon.png" />
-      </head>
-      <body
-        suppressHydrationWarning
-        className={`antialiased bg-primary min-h-screen`}
-      >
-        <div className="bg-primary min-h-screen">
-          {children}
-        </div>
+    <html lang="en">
+      <body className={`font-sans antialiased`}>
+        {children}
+        <Analytics />
       </body>
     </html>
-  );
+  )
 }

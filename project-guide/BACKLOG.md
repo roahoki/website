@@ -1,0 +1,4 @@
+- [ ] Blog con MDX para artículos técnicos.
+- [ ] Animaciones de entrada con Framer Motion.
+- [ ] Integración con Spotify API para mostrar qué escucho.
+- [ ] Dashboard de métricas personales.
