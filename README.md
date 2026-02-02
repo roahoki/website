@@ -1,5 +1,1 @@
-# roahoki website 🐈‍⬛
-
-```bash
-npm run dev
-```
+# Joaquin Peralta
