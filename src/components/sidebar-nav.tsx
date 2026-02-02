@@ -4,16 +4,16 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 
 const navItems = [
-  { href: "/", label: "about" },
-  { href: "/thoughts", label: "thoughts" },
-  { href: "/projects", label: "projects" },
+  { href: "/", label: "Sobre mí" },
+  { href: "/experience", label: "Experiencia" },
+  { href: "/projects", label: "Proyectos" },
 ]
 
 export function SidebarNav() {
   const pathname = usePathname()
 
   return (
-    <nav className="flex flex-col items-end gap-1 pr-8 pt-12 text-sm">
+    <nav className="flex flex-row gap-4 px-6 py-6 text-sm md:flex-col md:items-end md:gap-1 md:px-0 md:pr-8 md:pt-12">
       {navItems.map((item) => {
         const isActive = pathname === item.href
         return (
