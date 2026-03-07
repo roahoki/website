@@ -1,22 +1,35 @@
 import React from "react"
-import { getTranslations } from "next-intl/server"
 import Image from "next/image"
+import { getTranslations } from "next-intl/server"
+import { AtipicusIcon } from "@/components/icons/atipicus-icon"
+import { BiomechanicsIcon } from "@/components/icons/biomechanics-icon"
+import { MestiIcon } from "@/components/icons/mesti-icon"
+import { UCIcon } from "@/components/icons/uc-icon"
+
+function FaviconIcon({ size = 20, className }: { size?: number; className?: string }) {
+  return (
+    <Image
+      src="/favicon.ico"
+      alt="icon"
+      width={size}
+      height={size}
+      className={className}
+    />
+  )
+}
 
 interface ProjectSectionProps {
-  icon?: string
-  iconSrc?: string
+  icon?: React.ReactNode
   title: string
   children: React.ReactNode
 }
 
-function ProjectSection({ icon, iconSrc, title, children }: ProjectSectionProps) {
+function ProjectSection({ icon, title, children }: ProjectSectionProps) {
   return (
     <section className="mb-8">
-      <h2 className="text-sm font-semibold text-foreground mb-2 flex items-center gap-2">
-        {iconSrc ? (
-          <Image src={iconSrc} alt={title} width={20} height={20} className="object-contain" />
-        ) : icon ? (
-          <span>{icon}</span>
+      <h2 className="text-base font-semibold text-foreground mb-2 flex items-center gap-2">
+        {icon ? (
+          <span className="w-10 h-10 flex items-center justify-center shrink-0">{icon}</span>
         ) : null}
         {title}
       </h2>
@@ -43,7 +56,7 @@ export async function ExperienceContent() {
 
       <p className="text-sm leading-relaxed text-foreground/90 mb-8">{t("subtitle")}</p>
 
-      <ProjectSection icon="A" title="Atipicus">
+      <ProjectSection icon={<AtipicusIcon className="w-full h-full" />} title="Atipicus">
         <p>
           {t.rich("atipicus", {
             atipicus: extLink("https://atipic.us/"),
@@ -54,7 +67,7 @@ export async function ExperienceContent() {
         </p>
       </ProjectSection>
 
-      <ProjectSection icon="B" title="Biomechanics.wav">
+      <ProjectSection icon={<BiomechanicsIcon size={40} className="object-contain rounded-full" />} title="Biomechanics.wav">
         <p>
           {t.rich("biomechanics", {
             biomechanics: extLink("https://www.biomechanics.cl/links"),
@@ -65,7 +78,7 @@ export async function ExperienceContent() {
         </p>
       </ProjectSection>
 
-      <ProjectSection icon="F" title="Freelance Fullstack">
+      <ProjectSection icon={<FaviconIcon size={40} className="object-contain rounded-full" />} title="Freelance Fullstack">
         <p>
           {t.rich("freelance", {
             react: extLink("https://react.dev"),
@@ -75,7 +88,7 @@ export async function ExperienceContent() {
         </p>
       </ProjectSection>
 
-      <ProjectSection icon="M" title="Mesti">
+      <ProjectSection icon={<MestiIcon className="w-full h-full" />} title="Mesti">
         <p>
           {t.rich("mesti", {
             mesti: extLink("https://mesti.app/"),
@@ -84,7 +97,7 @@ export async function ExperienceContent() {
         </p>
       </ProjectSection>
 
-      <ProjectSection icon="P" title="PUC Chile">
+      <ProjectSection icon={<UCIcon className="w-full h-full" />} title="PUC Chile">
         <p>{t("puc")}</p>
       </ProjectSection>
     </article>
