@@ -2,16 +2,40 @@
   "nav": {
     "about": "Sobre mí",
     "experience": "Experiencia",
-    "projects": "Proyectos"
+    "projects": "Proyectos",
+    "teaching": "Clases",
+    "contact": "Contacto",
+    "cta": "Hablemos"
+  },
+  "hero": {
+    "available": "Disponible para nuevas oportunidades",
+    "role_swe": "Software Engineer",
+    "role_designer": "Diseñador",
+    "role_athlete": "Atleta de Calistenia",
+    "tagline": "Construyo con propósito, diseño experiencias y enseño lo que aprendo.",
+    "cta_projects": "Ver mi trabajo",
+    "cta_contact": "Hablemos"
+  },
+  "bento": {
+    "current_role": "Último rol en",
+    "current_desc": "Desarrollando agentes de IA para el sector salud.",
+    "teaching_stat_label": "años enseñando",
+    "teaching_at": "como ayudante y coordinador en la PUC",
+    "location": "Santiago, Chile",
+    "athlete_desc": "Fuera del código, entreno calistenia",
+    "stack_title": "Stack"
   },
   "about": {
     "name": "Joaquín Peralta",
     "p1": "Soy un Ingeniero de Software y trabajo como Trainee en <atipicus>Atipicus</atipicus>. Actualmente mi foco está en el desarrollo de Agentes de IA para el sector de la salud, pero mis intereses abarcan todo el stack de desarrollo, desde la infraestructura en la nube hasta las interfaces de usuario.",
     "p2": "Durante mi paso por la universidad tuve el privilegio de trabajar como ayudante y coordinador en varios cursos de ingeniería, lo que me permitió profundizar mis conocimientos y habilidades pedagógicas. A veces hago videos en youtube.",
-    "p3": "Puedes conocer más sobre mi historial e intereses a través de mis <experiences>experiencias</experiences>, <projects>proyectos</projects> y <github>GitHub</github>. Conversemos por <linkedin>LinkedIn</linkedin> o por <whatsapp>WhatsApp</whatsapp>."
+    "p3": "Puedes conocer más sobre mi historial e intereses a través de mis <experiences>experiencias</experiences>, <projects>proyectos</projects> y <github>GitHub</github>. Conversemos por <linkedin>LinkedIn</linkedin> o por <whatsapp>WhatsApp</whatsapp>.",
+    "bio": "Soy un Ingeniero de Software trabajando como Trainee en <atipicus>Atipicus</atipicus>, donde desarrollo Agentes de IA para el sector salud. Me apasiona todo el stack: desde infraestructura en la nube hasta interfaces de usuario. Llevo más de 4 años enseñando programación en la <puc>PUC</puc>.",
+    "bio_cta": "Encuentra mi trabajo en <github>GitHub</github> o conéctate por <linkedin>LinkedIn</linkedin> y <whatsapp>WhatsApp</whatsapp>."
   },
   "experience": {
     "title": "Experiencia",
+    "current": "Actual",
     "subtitle": "Me especializo en el desarrollo Full Stack moderno, desde arquitectura en la nube hasta interfaces de usuario escalables.",
     "atipicus": "Actualmente trabajo como Software Engineer Trainee en <atipicus>Atipicus</atipicus>. Estoy desarrollando un sistema de agente de IA centrado en el sector de la salud. Mi stack principal incluye el uso avanzado del <googleSDK>Google SDK</googleSDK>, infraestructura en <googleCloud>Google Cloud</googleCloud> y gestión de datos con <mongodb>MongoDB</mongodb>.",
     "biomechanics": "Estoy a cargo del desarrollo fullstack del sitio oficial de <biomechanics>Biomechanics</biomechanics>, un proyecto artístico-tecnológico. Tomo todas las decisiones técnicas, utilizando <nextjs>Next.js</nextjs>, <supabase>Supabase</supabase> y <clerk>Clerk</clerk>. He implementado una arquitectura escalable de back-office y optimizado el SEO para asegurar un alto rendimiento en producción.",
@@ -20,6 +44,31 @@
     "puc": "Poseo una sólida trayectoria académica y docente en la Pontificia Universidad Católica de Chile. He sido Coordinador General del curso Arquitectura de Computadores e impartido ayudantías en cátedras clave como Tecnologías y Aplicaciones Web, Estructuras de Datos y Programación Avanzada."
   },
   "projects": {
-    "intro": "Tengo un par de videos en youtube enseñando sobre estructura de datos y arquitectura de computadores :)"
+    "section_title": "Proyectos",
+    "intro": "Tengo un par de videos en youtube enseñando sobre estructura de datos y arquitectura de computadores :)",
+    "biomechanics_type": "Sitio web artístico-tecnológico",
+    "biomechanics_desc": "Desarrollo fullstack del sitio oficial. Arquitectura escalable de back-office, gestión de contenido y optimización SEO para alto rendimiento en producción.",
+    "visit": "Visitar",
+    "youtube_intro": "Videos en YouTube enseñando estructuras de datos y arquitectura de computadores."
+  },
+  "teaching": {
+    "title": "Clases particulares",
+    "intro": "Doy clases particulares a estudiantes de ingeniería de la PUC. Me adapto a tu forma de aprender y vamos al ritmo que necesites. No existen preguntas tontas ni temas que no se puedan entender.",
+    "subjects_title": "Materias",
+    "dsa_title": "Estructuras de Datos",
+    "dsa_desc": "Listas enlazadas, pilas, colas, árboles, grafos y algoritmos de búsqueda y ordenamiento. Desde la base conceptual hasta implementar lo que te pide el profe.",
+    "advanced_title": "Programación Avanzada",
+    "advanced_desc": "Paradigmas de programación, patrones de diseño, manejo de memoria y concurrencia. Lo que te hace pasar de código que funciona a código que es realmente bueno.",
+    "background_title": "Mi experiencia docente",
+    "background_text": "Fui Coordinador General del curso Arquitectura de Computadores y ayudante en Tecnologías y Aplicaciones Web, Estructuras de Datos y Programación Avanzada en la PUC. Si algo aprendí es que cada persona tiene su propia forma de entender las cosas, y me encanta encontrar cuál es la tuya.",
+    "cta_title": "¿Necesitas una clase?",
+    "cta_text": "Escríbeme por WhatsApp y coordinamos horario y precio según tu situación. Sin compromiso, la primera conversación es gratis :)",
+    "cta_button": "Escríbeme por WhatsApp",
+    "testimonials_title": "Lo que dicen mis estudiantes",
+    "testimonials_coming": "Pronto estarán acá... estoy juntando los testimonios de mis alumnos."
+  },
+  "contact": {
+    "title": "Hablemos",
+    "subtitle": "Abierto a roles SWE, freelance y clases particulares. Conversemos."
   }
 }
