@@ -1,6 +1,6 @@
 import React from "react"
 import type { Metadata } from "next"
-import { Nunito } from "next/font/google"
+import { Plus_Jakarta_Sans } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { NextIntlClientProvider } from "next-intl"
 import { getMessages } from "next-intl/server"
@@ -8,7 +8,7 @@ import { routing } from "@/i18n/routing"
 import { Providers } from "@/components/providers"
 import "../globals.css"
 
-const nunito = Nunito({
+const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
   variable: "--font-sans",
   weight: ["400", "500", "600", "700", "800"],
@@ -38,7 +38,7 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} suppressHydrationWarning>
-      <body className={`${nunito.variable} font-sans antialiased`}>
+      <body className={`${plusJakartaSans.variable} font-sans antialiased`}>
         <Providers>
           <NextIntlClientProvider messages={messages}>
             {children}
