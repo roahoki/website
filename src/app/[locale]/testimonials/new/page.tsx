@@ -155,7 +155,7 @@ export default function NewTestimonialPage() {
 
   if (formState === "success") {
     return (
-      <main className="min-h-screen flex items-center justify-center px-4">
+      <main className="h-[100dvh] flex items-center justify-center px-4 overflow-hidden">
         <div className="max-w-md w-full rounded-2xl border border-brand/30 bg-brand-muted p-8 text-center">
           <div className="w-12 h-12 rounded-full bg-brand/15 border border-brand/25 flex items-center justify-center mx-auto mb-4">
             <svg className="w-6 h-6 text-brand" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
@@ -218,7 +218,7 @@ export default function NewTestimonialPage() {
         </div>
       )}
 
-      <main className="min-h-screen py-12 px-4 overflow-x-hidden">
+      <main className="py-8 px-4 overflow-x-hidden">
         <div className="max-w-lg mx-auto">
           <div className="mb-8">
             <h1 className="text-base font-bold text-foreground mb-2">{t("title")}</h1>
