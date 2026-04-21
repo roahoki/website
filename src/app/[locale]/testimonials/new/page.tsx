@@ -1,7 +1,8 @@
 "use client"
 
-import { useState, useRef, useCallback } from "react"
+import { useState, useRef, useCallback, useEffect } from "react"
 import { useTranslations } from "next-intl"
+import { useRouter } from "next/navigation"
 import { createClient } from "@supabase/supabase-js"
 import Image from "next/image"
 import Cropper from "react-easy-crop"
@@ -46,6 +47,7 @@ async function getCroppedImg(imageSrc: string, pixelCrop: Area): Promise<File> {
 
 export default function NewTestimonialPage() {
   const t = useTranslations("testimonialForm")
+  const router = useRouter()
 
   const [name, setName] = useState("")
   const [message, setMessage] = useState("")
@@ -153,6 +155,12 @@ export default function NewTestimonialPage() {
     setFormState("success")
   }
 
+  useEffect(() => {
+    if (formState !== "success") return
+    const timer = setTimeout(() => router.push("/"), 3000)
+    return () => clearTimeout(timer)
+  }, [formState, router])
+
   if (formState === "success") {
     return (
       <main className="h-[100dvh] flex items-center justify-center px-4 overflow-hidden">
@@ -164,6 +172,7 @@ export default function NewTestimonialPage() {
           </div>
           <h1 className="text-base font-bold text-foreground mb-2">{t("success_title")}</h1>
           <p className="text-sm text-foreground/70">{t("success_message")}</p>
+          <p className="text-xs text-muted-foreground mt-4">{t("success_redirect")}</p>
         </div>
       </main>
     )

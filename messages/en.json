@@ -98,6 +98,7 @@
     "submitting": "Submitting...",
     "success_title": "Testimonial submitted",
     "success_message": "I'll review it soon and get it posted, thank you so much :)",
+    "success_redirect": "Taking you back to the main page...",
     "error": "Something went wrong. Please try again.",
     "validation_social": "Please provide at least one contact method.",
     "validation_name": "Name must be at least 2 characters.",

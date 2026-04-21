@@ -98,6 +98,7 @@
     "submitting": "Enviando...",
     "success_title": "Testimonio enviado",
     "success_message": "Lo revisaré pronto y lo dejaré subido, muchas gracias :)",
+    "success_redirect": "Volviendo a la página principal...",
     "error": "Algo salio mal. Por favor intenta de nuevo.",
     "validation_social": "Debes ingresar al menos un medio de contacto.",
     "validation_name": "El nombre debe tener al menos 2 caracteres.",

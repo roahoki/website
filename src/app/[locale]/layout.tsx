@@ -1,5 +1,5 @@
 import React from "react"
-import type { Metadata } from "next"
+import type { Metadata, Viewport } from "next"
 import { Plus_Jakarta_Sans } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { NextIntlClientProvider } from "next-intl"
@@ -13,6 +13,11 @@ const plusJakartaSans = Plus_Jakarta_Sans({
   variable: "--font-sans",
   weight: ["400", "500", "600", "700", "800"],
 })
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+}
 
 export const metadata: Metadata = {
   title: "Joaquín",
