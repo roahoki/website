@@ -174,8 +174,9 @@ export default async function HomePage() {
                 <div className="flex items-center gap-4 h-full">
                   <BukIcon size={48} className="object-contain shrink-0" />
                   <div>
-                    <span className="text-xs text-muted-foreground">{tBento("current_role")} Buk</span>
-                    <p className="text-xs text-muted-foreground leading-relaxed mt-1">
+                    <span className="text-xs text-muted-foreground">{tBento("current_role")}</span>
+                    <p className="text-sm font-bold text-foreground mb-1">Buk</p>
+                    <p className="text-xs text-muted-foreground leading-relaxed">
                       {tBento("current_desc")}
                     </p>
                   </div>
