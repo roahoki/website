@@ -173,7 +173,7 @@ export default async function HomePage() {
               <div className="h-full rounded-2xl border border-border bg-card p-5 hover:border-brand/40 hover:bg-brand-muted transition-colors duration-300">
                 <div className="flex items-center gap-2 mb-3">
                   <div className="w-4 h-4 shrink-0">
-                    <BukIcon className="w-full h-full" />
+                    <BukIcon className="w-full h-full object-contain" />
                   </div>
                   <span className="text-xs text-muted-foreground">{tBento("current_role")}</span>
                 </div>
@@ -206,7 +206,7 @@ export default async function HomePage() {
                   </p>
                 </div>
                 <div className="pt-4 border-t border-border mt-4">
-                  <p className="text-xs font-semibold text-foreground mb-0.5">Calisthenics</p>
+                  <p className="text-xs font-semibold text-foreground mb-0.5">Calistenia</p>
                   <p className="text-xs text-muted-foreground">{tBento("athlete_desc")}</p>
                 </div>
               </div>
@@ -270,8 +270,8 @@ export default async function HomePage() {
             <AnimateIn delay={60}>
               <div className="rounded-2xl border border-border bg-card p-5 hover:border-brand/30 transition-colors duration-200">
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-xl border border-border flex items-center justify-center shrink-0 overflow-hidden">
-                    <BukIcon className="w-7 h-7 text-foreground" />
+                  <div className="w-10 h-10 rounded-xl border border-border shrink-0 overflow-hidden">
+                    <BukIcon className="w-full h-full object-contain p-1.5" />
                   </div>
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2 flex-wrap mb-1">
@@ -626,7 +626,7 @@ export default async function HomePage() {
       <footer className="border-t border-border">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex items-center justify-between text-xs text-muted-foreground">
           <span>&copy; {new Date().getFullYear()} Joaquín Peralta</span>
-          <span>Built with Next.js</span>
+          <span>Hecho por roahoki</span>
         </div>
       </footer>
     </div>
