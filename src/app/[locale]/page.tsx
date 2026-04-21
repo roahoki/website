@@ -7,6 +7,8 @@ import { AtipicusIcon } from "@/components/icons/atipicus-icon"
 import { BiomechanicsIcon } from "@/components/icons/biomechanics-icon"
 import { MestiIcon } from "@/components/icons/mesti-icon"
 import { UCIcon } from "@/components/icons/uc-icon"
+import { Suspense } from "react"
+import { LandingTestimonials } from "@/components/landing-testimonials"
 
 const WHATSAPP = "https://wa.link/ht8ioc"
 const GITHUB = "https://github.com/roahoki"
@@ -505,9 +507,15 @@ export default async function HomePage() {
           </AnimateIn>
 
           <AnimateIn delay={160}>
-            <div className="rounded-2xl border border-dashed border-border/50 p-6 text-center">
-              <p className="text-sm text-muted-foreground">{tTeach("testimonials_coming")}</p>
-            </div>
+            <Suspense
+              fallback={
+                <div className="rounded-2xl border border-dashed border-border/50 p-6 text-center">
+                  <p className="text-sm text-muted-foreground">{tTeach("testimonials_coming")}</p>
+                </div>
+              }
+            >
+              <LandingTestimonials />
+            </Suspense>
           </AnimateIn>
         </section>
 

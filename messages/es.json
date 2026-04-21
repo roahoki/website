@@ -65,10 +65,44 @@
     "cta_text": "Escríbeme por WhatsApp y coordinamos horario y precio según tu situación. Sin compromiso, la primera conversación es gratis :)",
     "cta_button": "Escríbeme por WhatsApp",
     "testimonials_title": "Lo que dicen mis estudiantes",
-    "testimonials_coming": "Pronto estarán acá... estoy juntando los testimonios de mis alumnos."
+    "testimonials_coming": "Pronto estarán acá... estoy juntando los testimonios de mis alumnos.",
+    "testimonials_leave_cta": "Tomaste clases conmigo? Deja el tuyo"
   },
   "contact": {
     "title": "Hablemos",
     "subtitle": "Abierto a roles SWE, freelance y clases particulares. Conversemos."
+  },
+  "testimonialForm": {
+    "title": "Deja tu testimonio",
+    "subtitle": "Tu opinion me ayuda a llegar a mas estudiantes.",
+    "name_label": "Tu nombre",
+    "name_placeholder": "Nombre completo",
+    "message_label": "Tu mensaje",
+    "message_placeholder": "Que fue lo mas valioso de las clases?",
+    "chars_min": "caracteres minimo",
+    "photo_label": "Foto de perfil",
+    "photo_hint": "Una imagen tuya para que se vea que eres una persona real (jpg, png o webp, max. 2MB).",
+    "photo_button": "Subir foto",
+    "photo_too_large": "La imagen no puede pesar mas de 2MB.",
+    "social_label": "Contacto",
+    "social_hint": "Al menos uno es obligatorio para confirmar que eres real.",
+    "linkedin_placeholder": "https://linkedin.com/in/tu-perfil",
+    "github_placeholder": "tu-usuario-de-github",
+    "email_placeholder": "tu@email.com",
+    "submit": "Enviar testimonio",
+    "submitting": "Enviando...",
+    "success_title": "Testimonio enviado",
+    "success_message": "Lo revisare pronto y lo publicare si todo esta bien. Gracias.",
+    "error": "Algo salio mal. Por favor intenta de nuevo.",
+    "validation_social": "Debes ingresar al menos un medio de contacto.",
+    "validation_name": "El nombre debe tener al menos 2 caracteres.",
+    "validation_message": "El mensaje debe tener al menos 20 caracteres.",
+    "cta_leave": "Deja el tuyo",
+    "cta_be_first": "Se el primero en dejar un testimonio",
+    "photo_change": "Cambiar foto",
+    "photo_remove": "Quitar",
+    "crop_hint": "Arrastra y usa el slider para encuadrar tu cara",
+    "crop_confirm": "Confirmar",
+    "crop_cancel": "Cancelar"
   }
 }

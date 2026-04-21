@@ -65,10 +65,44 @@
     "cta_text": "Message me on WhatsApp and we'll sort out timing and pricing based on your situation. No strings attached — first chat is free :)",
     "cta_button": "Message me on WhatsApp",
     "testimonials_title": "What my students say",
-    "testimonials_coming": "Coming soon... I'm collecting testimonials from my students."
+    "testimonials_coming": "Coming soon... I'm collecting testimonials from my students.",
+    "testimonials_leave_cta": "Did you take classes with me? Leave yours"
   },
   "contact": {
     "title": "Let's talk",
     "subtitle": "Open to SWE roles, freelance, and private tutoring. Let's connect."
+  },
+  "testimonialForm": {
+    "title": "Leave a testimonial",
+    "subtitle": "Your feedback helps me reach more students.",
+    "name_label": "Your name",
+    "name_placeholder": "Full name",
+    "message_label": "Your message",
+    "message_placeholder": "What was most valuable about the sessions?",
+    "chars_min": "characters minimum",
+    "photo_label": "Profile photo",
+    "photo_hint": "A photo of yourself so people know you are real (jpg, png or webp, max 2MB).",
+    "photo_button": "Upload photo",
+    "photo_too_large": "Image must be under 2MB.",
+    "social_label": "Contact",
+    "social_hint": "At least one is required to confirm you are real.",
+    "linkedin_placeholder": "https://linkedin.com/in/your-profile",
+    "github_placeholder": "your-github-username",
+    "email_placeholder": "you@email.com",
+    "submit": "Submit testimonial",
+    "submitting": "Submitting...",
+    "success_title": "Testimonial submitted",
+    "success_message": "I will review it soon and publish it if everything looks good. Thank you.",
+    "error": "Something went wrong. Please try again.",
+    "validation_social": "Please provide at least one contact method.",
+    "validation_name": "Name must be at least 2 characters.",
+    "validation_message": "Message must be at least 20 characters.",
+    "cta_leave": "Leave yours",
+    "cta_be_first": "Be the first to leave a testimonial",
+    "photo_change": "Change photo",
+    "photo_remove": "Remove",
+    "crop_hint": "Drag and use the slider to frame your face",
+    "crop_confirm": "Confirm",
+    "crop_cancel": "Cancel"
   }
 }

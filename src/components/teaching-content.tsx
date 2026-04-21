@@ -1,4 +1,6 @@
 import { getTranslations } from "next-intl/server"
+import { supabaseAnon } from "@/lib/supabase"
+import { TestimonialCard, type Testimonial } from "@/components/testimonial-card"
 
 function SubjectCard({
   icon,
@@ -26,18 +28,19 @@ function SubjectCard({
   )
 }
 
-function TestimonialPlaceholder({ message }: { message: string }) {
-  return (
-    <div className="rounded-xl border border-dashed border-border/60 p-5 text-center">
-      <p className="text-sm text-muted-foreground">{message}</p>
-    </div>
-  )
-}
-
 const WHATSAPP_URL = "https://wa.link/ht8ioc"
 
 export async function TeachingContent() {
   const t = await getTranslations("teaching")
+  const tForm = await getTranslations("testimonialForm")
+
+  const { data: testimonials } = await supabaseAnon()
+    .from("testimonials")
+    .select("*")
+    .eq("status", "approved")
+    .order("created_at", { ascending: false })
+
+  const approved = (testimonials ?? []) as Testimonial[]
 
   return (
     <article className="px-6 py-6 md:max-w-xl md:pt-12 md:pl-8 md:pr-8">
@@ -107,10 +110,35 @@ export async function TeachingContent() {
 
       {/* Testimonials */}
       <section className="animate-fade-up-delay-3">
-        <h2 className="text-xs font-bold uppercase tracking-widest text-brand mb-3">
-          {t("testimonials_title")}
-        </h2>
-        <TestimonialPlaceholder message={t("testimonials_coming")} />
+        <div className="flex items-center justify-between mb-3">
+          <h2 className="text-xs font-bold uppercase tracking-widest text-brand">
+            {t("testimonials_title")}
+          </h2>
+          <a
+            href="testimonials/new"
+            className="text-xs text-brand hover:underline"
+          >
+            {tForm("cta_leave")}
+          </a>
+        </div>
+
+        {approved.length === 0 ? (
+          <div className="rounded-xl border border-dashed border-border/60 p-5 text-center">
+            <p className="text-sm text-muted-foreground mb-2">{t("testimonials_coming")}</p>
+            <a
+              href="testimonials/new"
+              className="text-xs text-brand hover:underline"
+            >
+              {tForm("cta_be_first")}
+            </a>
+          </div>
+        ) : (
+          <div className="flex flex-col gap-3">
+            {approved.map((testimonial) => (
+              <TestimonialCard key={testimonial.id} t={testimonial} />
+            ))}
+          </div>
+        )}
       </section>
     </article>
   )
