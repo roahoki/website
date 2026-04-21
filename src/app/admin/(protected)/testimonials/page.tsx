@@ -72,12 +72,20 @@ export default function AdminTestimonialsPage() {
     <main className="max-w-3xl mx-auto px-4 py-10">
       <div className="flex items-center justify-between mb-8">
         <h1 className="text-base font-bold text-foreground">Testimonios</h1>
-        <button
-          onClick={logout}
-          className="text-xs text-muted-foreground hover:text-foreground transition-colors"
-        >
-          Cerrar sesion
-        </button>
+        <div className="flex items-center gap-4">
+          <a
+            href="/"
+            className="text-xs text-muted-foreground hover:text-foreground transition-colors"
+          >
+            ← Ir al sitio
+          </a>
+          <button
+            onClick={logout}
+            className="text-xs text-muted-foreground hover:text-foreground transition-colors"
+          >
+            Cerrar sesion
+          </button>
+        </div>
       </div>
 
       {/* Filters */}
