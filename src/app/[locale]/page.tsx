@@ -143,19 +143,15 @@ export default async function HomePage() {
             {/* Photo */}
             <div className="md:col-span-2 flex justify-center md:justify-end">
               <AnimateIn delay={200} from="right">
-                <div className="relative">
-                  <div className="w-52 h-52 md:w-64 md:h-64 rounded-2xl overflow-hidden border border-border shadow-2xl shadow-black/30">
-                    <Image
-                      src="https://avatars.githubusercontent.com/roahoki"
-                      alt="Joaquín Peralta"
-                      width={256}
-                      height={256}
-                      className="w-full h-full object-cover"
-                      priority
-                    />
-                  </div>
-                  <div className="absolute -bottom-3 -right-3 w-10 h-10 rounded-xl bg-brand/15 border border-brand/20" />
-                  <div className="absolute -top-2 -left-2 w-5 h-5 rounded-lg bg-brand/10 border border-brand/15" />
+                <div className="w-60 h-60 md:w-72 md:h-72 rounded-2xl overflow-hidden border border-border shadow-2xl shadow-black/30">
+                  <Image
+                    src="https://avatars.githubusercontent.com/roahoki"
+                    alt="Joaquín Peralta"
+                    width={288}
+                    height={288}
+                    className="w-full h-full object-cover"
+                    priority
+                  />
                 </div>
               </AnimateIn>
             </div>
