@@ -7,14 +7,18 @@ export async function LandingTestimonials() {
   const tTeach = await getTranslations("teaching")
   const tForm = await getTranslations("testimonialForm")
 
-  const { data } = await supabaseAnon()
-    .from("testimonials")
-    .select("*")
-    .eq("status", "approved")
-    .order("created_at", { ascending: false })
-    .limit(3)
-
-  const testimonials = (data ?? []) as Testimonial[]
+  let testimonials: Testimonial[] = []
+  try {
+    const { data } = await supabaseAnon()
+      .from("testimonials")
+      .select("*")
+      .eq("status", "approved")
+      .order("created_at", { ascending: false })
+      .limit(3)
+    testimonials = (data ?? []) as Testimonial[]
+  } catch {
+    // silently fail — show empty state if Supabase is unreachable
+  }
 
   return (
     <div>
