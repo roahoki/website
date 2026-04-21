@@ -218,7 +218,7 @@ export default function NewTestimonialPage() {
         </div>
       )}
 
-      <main className="min-h-screen py-12 px-4">
+      <main className="min-h-screen py-12 px-4 overflow-x-hidden">
         <div className="max-w-lg mx-auto">
           <div className="mb-8">
             <h1 className="text-base font-bold text-foreground mb-2">{t("title")}</h1>
@@ -263,14 +263,14 @@ export default function NewTestimonialPage() {
                 {t("photo_label")}
               </label>
               <p className="text-xs text-muted-foreground mb-2">{t("photo_hint")}</p>
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-3">
                 {imagePreview ? (
                   <Image
                     src={imagePreview}
                     alt="preview"
                     width={48}
                     height={48}
-                    className="rounded-full w-12 h-12 object-cover border border-border"
+                    className="rounded-full w-12 h-12 object-cover border border-border shrink-0"
                   />
                 ) : (
                   <div className="w-12 h-12 rounded-full border border-dashed border-border/60 flex items-center justify-center shrink-0">
@@ -279,7 +279,7 @@ export default function NewTestimonialPage() {
                     </svg>
                   </div>
                 )}
-                <div className="flex gap-2">
+                <div className="flex flex-wrap gap-2 min-w-0">
                   <button
                     type="button"
                     onClick={() => fileInputRef.current?.click()}
@@ -337,7 +337,8 @@ export default function NewTestimonialPage() {
                 <div className="flex items-center gap-2">
                   <span className="text-xs text-muted-foreground w-16 shrink-0">Email</span>
                   <input
-                    type="email"
+                    type="text"
+                    inputMode="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder={t("email_placeholder")}
